@@ -18,11 +18,12 @@
     <script>
         stlite.mount({
             idbfsMountpoints: ["/data"],
-            requirements: ["requests"], // <- Removido "supabase" para evitar o erro do Pydantic
+            requirements: ["requests"],
             entrypoint: "app.py",
             files: {
                 "app.py": {
-                    url: "app.py"
+                    // Busca o código Python limpo direto do seu repositório principal BUSGUARD
+                    url: "https://raw.githubusercontent.com/TecnologiaAndre/BUSGUARD/main/app.py"
                 }
             }
         }, document.getElementById("root"));
